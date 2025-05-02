@@ -37,7 +37,7 @@ def readPolytopes(fname="polytopes.txt"):
                     polytope = polytope & (t1 < t2) & (t2 < t3)
 
 
-            polytopes.append (expr)
+            polytopes.append (polytope)
             #polytopes.append (sympy2jax.SymbolicModule(polytope))
     polytopes = sympy2jax.SymbolicModule(polytopes)
     y0 = {str(sym): jnp.array(0) for sym in symbols}
